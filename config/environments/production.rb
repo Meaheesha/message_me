@@ -91,4 +91,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  confid.action_cable.disable_request_forgery_protection = true
+  config.web_socket_server_url = "wss://meaheesha-message-me-app.herokuapp.com/cable" 
+  config.action_cable.allowed_request_origins = ['https://meaheesha-message-me-app.herokuapp.com', 'http://meaheesha-message-me-app.herokuapp.com']
 end
